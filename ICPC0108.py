@@ -14,6 +14,7 @@ while t > 0:
                 l += 1
             elif a[i] + a[l] + a[r] > 0:
                 r -= 1
-            else: l += 1
+            else: 
+                l += 1
     print(res)
  
