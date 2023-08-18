@@ -6,5 +6,8 @@ while 1:
     k, s = a.split()
     k, res = int(k), ""
     for i in s:
-        res += P[(ord(i) - 65 + k) % 28]
+        if i == '_': i = 91
+        elif i == '.': i = 92
+        else: i = ord(i)
+        res += P[(i - 65 + k) % 28]
     print(res[::-1])
