@@ -12,4 +12,6 @@
 #     i += 1
 #     if i == t: break
 
-print(len(input()) - 1)
+#for _ in range(int(sys.stdin.readline())):
+
+#memory with array < memory with list
