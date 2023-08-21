@@ -12,4 +12,4 @@
 #     i += 1
 #     if i == t: break
 
-
+print(len(input()) - 1)
