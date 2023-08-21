@@ -1,10 +1,15 @@
-t = int(input())
+# import sys
+# def stdin_gen():
+#     for x in sys.stdin.read().split():
+#         yield int(x)
+# cin = stdin_gen()
 
-while t > 0:
-    t -= 1
-    n = int(input())
-    res, start = 0, 1
-    start = 1 if n & 1 else 2
-    for i in range(start, n + 1, 2): res += 1 / i
-    print(f"%.6f" % res)
-    
+# import sys
+# i = 0
+# t = int(input())
+# for line in sys.stdin:
+#     n = int(line)
+#     i += 1
+#     if i == t: break
+
+
