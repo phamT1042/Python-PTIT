@@ -22,12 +22,12 @@ for _ in range(int(sys.stdin.readline())):
         res = 0
         for j in range(bound + 1):
             lower2 = lower or j < bound
-            mod8_new = ((mod8 * 2) % 8 + (j % 8)) % 8
+            mod8_new = (mod8 * 10 + j) % 8
             cnt68_new = cnt68
             if j == 6 or j == 8: cnt68_new += 1
             res += DP(i + 1, lower2, cnt68_new, mod8_new)
 
         dp[i][lower][cnt68][mod8] = res
         return dp[i][lower][cnt68][mod8]
-   
-    print(DP(0, 0, 0, 0))
+    
+    sys.stdout.write(str(DP(0, 0, 0, 0)) + "\n")
