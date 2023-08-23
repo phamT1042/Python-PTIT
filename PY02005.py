@@ -4,23 +4,20 @@ def merge(a, l, m, r):
     while i < len(tmp1) and j < len(tmp2):
         if tmp1[i] <= tmp2[j]:
             a[l] = tmp1[i]
-            l += 1
-            i += 1
+            l, i = l + 1, i + 1
         else:
             cnt += len(tmp1) - i
             a[l] = tmp2[j]
-            l += 1
-            j += 1
+            l, j = l + 1, j + 1
+
     while i < len(tmp1): 
         a[l] = tmp1[i]
-        l += 1
-        i += 1
+        l, i = l + 1, i + 1
     while j < len(tmp2): 
         a[l] = tmp2[j]
-        l += 1
-        j += 1
-    return cnt
+        l, j = l + 1, j + 1
 
+    return cnt
 
 def merge_sort(a, l, r):
     cnt = 0
