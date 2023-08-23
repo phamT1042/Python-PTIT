@@ -6,7 +6,7 @@ k = int(input())
 
 sumUp, sumDown = 0, 0
 for i in range(n):
-    for j in range(n - i - 1): sumUp += matrix[i][j]
-    for j in range(n - i, n): sumDown += matrix[i][j]
+    sumUp += sum(matrix[i][: n - i - 1])
+    sumDown += sum(matrix[i][n - i : n])
 diff = abs(sumUp - sumDown)
 print("NO", diff, sep = '\n') if diff > k else print("YES", diff, sep = '\n')
