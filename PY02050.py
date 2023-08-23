@@ -4,12 +4,12 @@ while t > 0:
     n = int(input())
     a = list(map(int, input().split()))
     res = [1] * n
-    stack = [[a[0], 0]]
+    stack = [0]
     for i in range(1, n):
-        while a[i] > stack[-1][0]:
-            res[i] += res[stack[-1][1]]
+        while a[i] > a[stack[-1]]:
+            res[i] += res[stack[-1]]
             stack.pop()
             if not len(stack): break
-        stack.append([a[i], i])
+        stack.append(i)
     for x in res: print(x, end = ' ')
     print()
