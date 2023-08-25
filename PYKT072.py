@@ -1,20 +1,3 @@
-# import sys
-# def stdin_gen():
-#     for x in sys.stdin.read().split():
-#         yield int(x)
-# cin = stdin_gen()
-
-# import sys
-# i = 0
-# t = int(input())
-# for line in sys.stdin:
-#     n = int(line)
-#     i += 1
-#     if i == t: break
-
-#for _ in range(int(sys.stdin.readline())):
-
-#memory with array < memory with list
 def solve(n, save):
     l = len(save[0])
     res, end, check = 2501, save[0], 1
