@@ -1,17 +1,17 @@
 import sys
 
-res, save, sign = [], [], ['.', '?', '!']
+save = []
 for line in sys.stdin:
     for var in line.split():
-        save.append(var)
-add = ""
+        save.append(str(var).lower())
+
+start, end = True, True
 for string in save:
-    if string[-1] != '.' and string[-1] != '?' and string[-1] != '!':
-        if len(add) == 0: string = str(string).title()
-        else: string = str(string).lower()
-        add += string + " "
+    if start: string = str(string).title()
+    if string[-1] == '.' or string[-1] == '?' or string[-1] == '!':
+        start, end = True, True
+        string = string[:len(string) - 1]
     else:
-        add += str(string)[:len(string) - 1].lower()
-        res.append(add)
-        add = ""
-for x in res: print(x)
+        start, end = False, False
+    print(string, end = ' ')
+    if end: print()
