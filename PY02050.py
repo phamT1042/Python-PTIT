@@ -6,7 +6,7 @@ while t > 0:
     res = [1] * n
     stack = [0]
     for i in range(1, n):
-        while a[i] > a[stack[-1]]:
+        while a[i] >= a[stack[-1]]:
             res[i] += res[stack[-1]]
             stack.pop()
             if not len(stack): break
