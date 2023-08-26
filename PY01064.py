@@ -1,5 +1,6 @@
 from sys import stdin, stdout
 
+#Haven't submit
 l = [0, 1]
 for i in range(2, 26): l.append(l[-1] * 2 + 1)
 
