@@ -6,7 +6,7 @@ for i in range(n): pair.append([a[i], i])
 pair.sort(key = lambda x: x[0])
 
 if n & 1:
-    m, tmp = n // 2, tmp
+    m, tmp = n // 2, 0
     for i in range(n):
         tmp += abs(pair[i][0] - pair[m][0])
     print(tmp, pair[m][0])
