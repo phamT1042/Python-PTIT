@@ -1,4 +1,3 @@
-from functools import lru_cache
 from sys import stdin, stdout
 
 for _ in range(int(stdin.readline())):
@@ -14,7 +13,6 @@ for _ in range(int(stdin.readline())):
     num = num[::-1]
     val_need_cnt = 0
 
-    @lru_cache
     def DP_0(i, lower, positive, cnt):
         if i == len(num):
             return cnt if positive else 0
@@ -32,7 +30,6 @@ for _ in range(int(stdin.readline())):
         dp_0[i][lower][positive][cnt] = res
         return res
     
-    @lru_cache
     def DP(i, lower, cnt):
         if i == len(num):
             return cnt
@@ -53,7 +50,7 @@ for _ in range(int(stdin.readline())):
     ans = [0] * 10
     ans[0] = DP_0(0, 0, 0, 0)
     dp_0 = [[[[-1 for _ in range(10)] for _ in range(2)] for _ in range(2)] for _ in range(10)]
-      
+    
     for i in range(1, 10):
         val_need_cnt = i
         ans[i] = DP(0, 0, 0)
