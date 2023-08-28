@@ -2,7 +2,6 @@ import sys
 
 for _ in range(int(sys.stdin.readline())):
     n = int(sys.stdin.readline())
-
     num = []
     while n > 0:
         num.append(n % 10)
