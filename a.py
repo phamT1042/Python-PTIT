@@ -17,18 +17,43 @@
 #memory with array < memory with list
 from sys import stdin, stdout
 
-for _ in range(int(stdin.readline())):
-    n = int(stdin.readline())
-    a = list(map(int, stdin.readline().split()))
+n = int(stdin.readline())
+ke = [[] for _ in range(2 * n + 1)]
+color = [0] * (2 * n + 1) 
+saveName, val = dict(), 1
 
-    res = 0
-    for i in range(1, n):
-        mn = min(a[i], a[i - 1])
-        mx = max(a[i], a[i - 1])
-        while mx > 2 * mn:
-            res += 1
-            mn *= 2
-    print(res)
+def DFS(u):
+    color[u] = 1
+    for v in ke[u]:
+        if not color[v]:
+            if DFS(v): return True
+        elif color[v] == 1: return True
+    color[u] = 2
+    return False
+
+def solve():
+    for i in range(1, val):
+        if not color[i]:
+            if DFS(i): return "impossible"
+    return "possible"
+
+for _ in range(n):
+    a = stdin.readline().split()
+    if a[0] not in saveName: 
+        saveName[a[0]] = val
+        val += 1
+    if a[2] not in saveName:
+        saveName[a[2]] = val
+        val += 1
+    if a[1] == '>': ke[saveName[a[0]]].append(saveName[a[2]])
+    else: ke[saveName[a[2]]].append(saveName[a[0]])
+
+print(solve())
+
+
+
+
+
 
 
 
