@@ -15,12 +15,23 @@
 #for _ in range(int(sys.stdin.readline())):
 
 #memory with array < memory with list
-from sys import stdin, stdout
+n = int(input())
+ke = [[] for _ in range(2 * pow(10, 5) + 1)]
+color = [0] * (2 * pow(10, 5) + 1) 
+saveName, saveEdge = set(), []
 
-n = int(stdin.readline())
-ke = [[] for _ in range(2 * n + 1)]
-color = [0] * (2 * n + 1) 
-saveName, val = dict(), 1
+def value(name):
+    l, r = 0, N
+    while l < r:
+        m = (l + r) >> 1
+        if name_sort[m] == name: return m
+        if name_sort[m] < name: l = m + 1
+        else: r = m
+    return -1
+
+def graph():
+    for n1, n2 in saveEdge:
+        ke[value(n1)].append(value(n2))
 
 def DFS(u):
     color[u] = 1
@@ -32,28 +43,21 @@ def DFS(u):
     return False
 
 def solve():
-    for i in range(1, val):
+    for i in range(N):
         if not color[i]:
             if DFS(i): return "impossible"
     return "possible"
 
 for _ in range(n):
-    a = stdin.readline().split()
-    if a[0] not in saveName: 
-        saveName[a[0]] = val
-        val += 1
-    if a[2] not in saveName:
-        saveName[a[2]] = val
-        val += 1
-    if a[1] == '>': ke[saveName[a[0]]].append(saveName[a[2]])
-    else: ke[saveName[a[2]]].append(saveName[a[0]])
+    name1, sign, name2 = input().split()
+    saveName.add(name1)
+    saveName.add(name2)
+    if sign == '>': saveEdge.append((name1, name2))
+    else: saveEdge.append((name2, name1))
+
+name_sort = sorted(saveName)
+N = len(name_sort)
+
+graph()
 
 print(solve())
-
-
-
-
-
-
-
-
