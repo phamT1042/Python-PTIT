@@ -17,6 +17,8 @@
 #memory with array < memory with list
 
 
+
+
         
 
 
