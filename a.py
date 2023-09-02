@@ -16,7 +16,13 @@
 
 #memory with array < memory with list
 
-
+a = [2, 6, 28]
+for i in range(3, 1000): a.append(6 * a[i - 1] - 4 * a[i - 2])
+save = []
+for i in range(0, 203):
+    save.append(int(str(a[i])[-3:]))
+for x in save:
+    print(x)
 
 
         
