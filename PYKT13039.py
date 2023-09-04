@@ -1,3 +1,5 @@
+# https://math.stackexchange.com/questions/3580060/the-area-of-infinitely-many-circles-inside-a-right-angle-triangle
+
 # Let r1, r2, r3 … be the radii. A right angle triangle with sides s1 and s2 (s2 < s1)
 # The area of the triangle is:
 # (1/2)r1(s1 + s2 + sqrt(s1^2 + s2^2)) = (1/2)s1s2
