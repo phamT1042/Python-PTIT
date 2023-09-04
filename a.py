@@ -16,13 +16,30 @@
 
 #memory with array < memory with list
 
-a = [2, 6, 28]
-for i in range(3, 1000): a.append(6 * a[i - 1] - 4 * a[i - 2])
-save = []
-for i in range(0, 203):
-    save.append(int(str(a[i])[-3:]))
-for x in save:
+def powMod(a, b, m):
+    res = 1
+    while b:
+        if b & 1:
+            res *= a
+            res %= m
+        a *= a
+        a %= m
+        b //= 2
+    return res
+
+for _ in range(int(input())):
+    a, b, m = map(int, input().split())
+    x, l, r = pow(10, 10), 0, pow(10, 10)
+
+    while l <= r:
+        mid = (l + r) // 2
+        if powMod(a, mid, m) == b:
+            x, r = mid, mid - 1
+        else:
+            l = mid + 1
     print(x)
+
+
 
 
         
