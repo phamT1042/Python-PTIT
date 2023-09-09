@@ -11,7 +11,7 @@
 # các số có thể được tạo ra sẽ có dạng: u(xi - x0) + v(xj - x0) (1)
 
 # Theo bổ đề Bezout: Nếu như d = gcd(a, b) với a, b là 2 số nguyên không âm
-# => Luôn tồn tại 2 số nguyên x, y sao cho ax + by = d (2)
+# => Mỗi số có dạng ax + by đều là bội của d (luôn tồn tại 2 số nguyên x, y sao cho ax + by = d)
 
 # (1)(2) => Các số có thể được tạo ra sẽ là bội số của gcd(x1 - x0, x2 - x0, ...)
 # Vậy ta chỉ cần kiểm tra k - x0 có chia hết cho gcd(x1 - x0, x2 - x0, ...)
