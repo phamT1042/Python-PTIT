@@ -16,7 +16,6 @@
 # (1)(2) => Các số có thể được tạo ra sẽ là bội số của gcd(x1 - x0, x2 - x0, ...)
 # Vậy ta chỉ cần kiểm tra k - x0 có chia hết cho gcd(x1 - x0, x2 - x0, ...)
 import math
-
 for i in range(int(input())):
     n, k = map(int, input().split())
     a = list(map(int, input().split()))
