@@ -3,6 +3,7 @@
 #     for x in sys.stdin.read().split():
 #         yield int(x)
 # cin = stdin_gen()
+#t = next(cin)
 
 # import sys
 # i = 0
