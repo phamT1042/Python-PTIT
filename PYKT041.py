@@ -7,6 +7,7 @@ for i in range(n):
     for j in range(n):
         if res[i][j] == 'C':
             hang[i], cot[j] = hang[i] + 1, cot[j] + 1
+            
 choose = 0
 for i in range(n): 
     if hang[i] > 1: choose += (hang[i] * (hang[i] - 1)) // 2
