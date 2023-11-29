@@ -17,6 +17,9 @@
 
 #memory with array < memory with list
 
+#input = open("ten file", "r")
+#output = open("ten file", "w")
+
 
 
     
