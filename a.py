@@ -20,6 +20,8 @@
 #input = open("ten file", "r")
 #output = open("ten file", "w")
 
+#read all lines in file: for line in input:
+
 
 
     
