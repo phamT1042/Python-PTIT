@@ -1,5 +1,4 @@
 from datetime import datetime
-from datetime import date
 
 class KhachSan:
     __cnt = 1
