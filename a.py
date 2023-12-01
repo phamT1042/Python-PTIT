@@ -3,6 +3,7 @@
 #     for x in sys.stdin.read().split():
 #         yield int(x)
 # cin = stdin_gen()
+# t = next(cin)
 
 # import sys
 # i = 0
@@ -15,6 +16,11 @@
 #for _ in range(int(sys.stdin.readline())):
 
 #memory with array < memory with list
+
+#input = open("ten file", "r")
+#output = open("ten file", "w")
+
+#read all lines in file: for line in input:
 
 
 
