@@ -22,6 +22,8 @@
 
 #read all lines in file: for line in input:
 
+#from sys import setrecursionlimit
+#setrecursionlimit(10 ** 6)
 
 
     
