@@ -25,6 +25,7 @@
 #setrecursionlimit(10 ** 6)
 
 #Đổi số cơ số 2 sang 10: num_oct = int(num_bin, 2)
+#Đổi cơ số 10 sang 2: num_bir (str[2:]) = bin(num_oct)
 #Đổi số sang kí tự chữ cái: char = chr(num + 65) (0 -> 'A') | char = chr(num + 97) (0 -> 'a')
 #Đổi kí tự sang mã ASCII: ord()
 
@@ -39,3 +40,7 @@
 #format 2 số phần thập phân: "{0:.2f}".format(n) | ("%.2f" % n)
 #format mã: "MS{:02}".format(ma)
 #Trung bình tổng dãy số n phần tử, làm tròn 1 số phần thập phân: round(((sum / n.0) * 10) / 10.0, 1)
+
+#diff date: 
+#from datetime import datetime
+#(datetime.strptime(end, "%d/%m/%Y") - datetime.strptime(start, "%d/%m/%Y")).days + 1

@@ -11,11 +11,12 @@ while t > 0:
         print(-1)
     else:
         swap_second = swap_first + 1
-        mx_val = n[swap_second]
-        for i in range(swap_first + 2, len(n)):
-            if n[i] > mx_val and n[i] < n[swap_first]:
-                swap_second = i
-                mx_val = n[i]
+        for i in range(len(n) - 1, swap_first, -1):
+            if n[i] < n[swap_first]:
+                j = i
+                while n[j] == n[i]: j -= 1
+                swap_second = j + 1
+                break
         
         n = n[:swap_first] + n[swap_second] + n[swap_first + 1:swap_second] + n[swap_first] + n[swap_second + 1:]
         print(-1) if n[0] == '0' else print(n)
