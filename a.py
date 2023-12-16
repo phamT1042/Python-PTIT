@@ -18,6 +18,7 @@
 
 #input = open("ten file", "r")
 #read all lines in file: for line in input:
+#đọc dòng trong file chú ý rstrip('\n')
 #output = open("ten file", "w")
 
 #from sys import setrecursionlimit
@@ -33,3 +34,8 @@
 #use stack or queue with deque:
 #from collections import deque
 #add: q.append() | pop_top (stack): q.pop() | pop_queue (queue): q.popleft()
+#OrderedDict giữ thứ tự phần tử thêm vào
+
+#format 2 số phần thập phân: "{0:.2f}".format(n) | ("%.2f" % n)
+#format mã: "MS{:02}".format(ma)
+#Trung bình tổng dãy số n phần tử, làm tròn 1 số phần thập phân: round(((sum / n.0) * 10) / 10.0, 1)

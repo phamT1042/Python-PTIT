@@ -2,6 +2,7 @@
 #<=> Mọi đường đi từ u nếu không đi qua x sẽ không đến được v
 
 from sys import stdin, stdout
+from collections import deque
 
 for _ in range(int(stdin.readline())):
     n, m, u, v = map(int, stdin.readline().split())
@@ -12,10 +13,11 @@ for _ in range(int(stdin.readline())):
 
     def BFS(skip):
         vs = [0 for i in range(n + 1)]
-        queue = [u]
+        queue = deque()
+        queue.append(u)
         vs[u], vs[skip] = 1, 1
         while len(queue):
-            tmp = queue.pop(0)
+            tmp = queue.popleft()
             if tmp == v: return False
             for i in ke[tmp]:
                 if not vs[i]:
