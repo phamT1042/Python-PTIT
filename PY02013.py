@@ -1,10 +1,13 @@
+from collections import deque
+
 while 1:
     n = int(input())
     if not n: break
     save = set()
-    queue = [n]
+    queue = deque()
+    queue.append(n)
     while len(queue):
-        value = queue.pop(0)
+        value = queue.popleft()
         if value == 1: break
         if value & 1:
             if (value * 3 + 1) not in save:

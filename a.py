@@ -13,7 +13,8 @@
 #     i += 1
 #     if i == t: break
 
-#memory with array < memory with list
+#memory with array < memory with list:
+#a = array.array('i', [0] * n)
 
 #input = open("ten file", "r")
 #read all lines in file: for line in input:
