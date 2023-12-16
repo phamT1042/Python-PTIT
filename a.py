@@ -24,6 +24,10 @@
 
 #Đổi số cơ số 2 sang 10: num_oct = int(num_bin, 2)
 #Đổi số sang kí tự chữ cái: char = chr(num + 65) (0 -> 'A') | char = chr(num + 97) (0 -> 'a')
+#Đổi kí tự sang mã ASCII: ord()
+
+#from bisect
+#lower_bound: bisect_left | upper_bound: bisect_right
 
 #use stack or queue with deque:
 #from collections import deque
