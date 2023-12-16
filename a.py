@@ -37,11 +37,13 @@
 #from collections import deque
 #add: q.append() | pop_top (stack): q.pop() | pop_queue (queue): q.popleft()
 #OrderedDict giữ thứ tự phần tử thêm vào
+#from queue import PriorityQueue
+# q.put() | q.queue[0]: ptu đầu priorityqueue | q.get(): pop ra ptu đầu
 
 #format 2 số phần thập phân: "{0:.2f}".format(n) | ("%.2f" % n)
 #format mã: "MS{:02}".format(ma)
 #Trung bình tổng dãy số n phần tử, làm tròn 1 số phần thập phân: round(((sum / n.0) * 10) / 10.0, 1)
-#hoặc trick làm tròn với 2 số phần thập phân: '{:.2f}'.format(n + 0.001)
+#trick làm tròn với 2 số phần thập phân: '{:.2f}'.format(n + 0.001)
 
 #diff date: 
 #from datetime import datetime
