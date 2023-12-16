@@ -31,6 +31,7 @@
 
 #from bisect
 #lower_bound: bisect_left | upper_bound: bisect_right
+#Hàm tính biểu thức dạng string: eval(s)
 
 #use stack or queue with deque:
 #from collections import deque
@@ -40,6 +41,7 @@
 #format 2 số phần thập phân: "{0:.2f}".format(n) | ("%.2f" % n)
 #format mã: "MS{:02}".format(ma)
 #Trung bình tổng dãy số n phần tử, làm tròn 1 số phần thập phân: round(((sum / n.0) * 10) / 10.0, 1)
+#hoặc trick làm tròn với 2 số phần thập phân: '{:.2f}'.format(n + 0.001)
 
 #diff date: 
 #from datetime import datetime

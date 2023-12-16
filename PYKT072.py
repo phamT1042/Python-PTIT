@@ -1,30 +1,25 @@
-def solve(n, save):
-    l = len(save[0])
-    res, end, check = 2501, save[0], 1
-    for i in range(l):
-        brow = 0
-        for j in range(n):
-            tmp = save[j]
-            for k in range(l):
-                if tmp == end:
-                    brow += k
-                    break
-                tmp = tmp[1::] + tmp[0]
-            if tmp != end: check = 0
-        res = min(res, brow)
-        end = end[1::] + end[0]
-    return res if check == 1 else -1
-                
 save = []
 n = int(input())
 for _ in range(n):
     save.append(input())
 
-print(solve(n, save))
+sh = dict()
+cnt, tmp = 1, save[0]
+while 1:
+    if tmp in sh: break
+    sh[tmp] = cnt
+    tmp, cnt = tmp[1:] + tmp[0], cnt + 1
 
+flag, res = 1, 2501
+for choose in sh:
+    sm, j = 0, sh[choose]
+    for string in save:
+        if string not in sh: 
+            flag = 0
+            break
+        i = sh[string]
+        if j >= i: sm += j - i 
+        else: sm += len(sh) - i + j
+    res = min(res, sm)
 
-
-
-
-
-
+print(res) if flag else print(-1)
