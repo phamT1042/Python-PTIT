@@ -1,8 +1,14 @@
-queue = ["2", "4", "6", "8"]
+from collections import deque
+
+queue = deque()
+queue.append("2")
+queue.append("4")
+queue.append("6")
+queue.append("8")
 save = []
 
 while len(queue):
-    tmp = queue.pop(0)
+    tmp = queue.popleft()
     save.append(tmp + tmp[::-1])
     if len(tmp) == 3: continue
     queue.append(tmp + "0")

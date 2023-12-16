@@ -25,3 +25,6 @@
 #Đổi số cơ số 2 sang 10: num_oct = int(num_bin, 2)
 #Đổi số sang kí tự chữ cái: char = chr(num + 65) (0 -> 'A') | char = chr(num + 97) (0 -> 'a')
 
+#use stack or queue with deque:
+#from collections import deque
+#add: q.append() | pop_top (stack): q.pop() | pop_queue (queue): q.popleft()
