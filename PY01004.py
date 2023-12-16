@@ -13,7 +13,7 @@ while t > 0:
     k, i = n, 2
     while n > 1:
         if not n % i:
-            k *= (i - 1) / i
+            k *= (i - 1) / i        #Phi ham Euler
             while not n % i: n /= i
         i += 1
     print(is_prime(int(k)))

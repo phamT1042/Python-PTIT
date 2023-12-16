@@ -13,17 +13,15 @@
 #     i += 1
 #     if i == t: break
 
-#for _ in range(int(sys.stdin.readline())):
-
 #memory with array < memory with list
 
 #input = open("ten file", "r")
-#output = open("ten file", "w")
-
 #read all lines in file: for line in input:
+#output = open("ten file", "w")
 
 #from sys import setrecursionlimit
 #setrecursionlimit(10 ** 6)
 
+#Đổi số cơ số 2 sang 10: num_oct = int(num_bin, 2)
+#Đổi số sang kí tự chữ cái: char = chr(num + 65) (0 -> 'A') | char = chr(num + 97) (0 -> 'a')
 
-    
